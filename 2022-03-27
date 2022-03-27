@@ -1,0 +1,99 @@
+#---------------------#
+#  팩토리얼 함수 만들기  #
+#---------------------#
+
+def fact(n):
+    i=1
+    factorial=1
+    while(i<=n):
+        factorial = factorial * i
+        i=i+1
+    print(factorial)
+
+print(fact(6)) # 완성된 함수에 6값을 대입하여 테스트
+
+#--------------------#
+#  생일축하 함수 만들기  #
+#--------------------#
+
+def happyBirthday(name) :
+    print("생일축하합니다")
+    print("생일축하합니다")
+    print("사랑하는 %s의"%name,end="")
+    print("생일축하합니다")
+
+happyBirthday("영찬") # 작성한 함수에 이름을 넣어 테스트
+
+#--------------------#
+#  온도변환 함수 만들기  #
+#--------------------#
+
+def F2C(n) :
+    c = (n-32)*5/9
+    print(c)
+
+print(F2C(38)) # 작성한 함수에 임의의 값을 넣어 테스트
+
+#------------#
+#  소수 찾기  #
+#------------#
+
+# >>> 1과 자기 자신을 제외한 2부터 n-1 사이 수 중 n을 나눴을 때 나머지가 0인 약수가 없으면 소수다.
+
+def prime(n) : # n이 6이라 가정해보자
+    for x in range(2,n) : # 루프변수 x에 2,3,4,5 값이 입력된다
+        if (n % x == 0) :
+            return "소수가 아닙니다."
+    return("소수입니다.") # return을 사용해야 함수의 값이 반환되고 종료된다.
+
+print(prime(12))
+
+#----------------#
+#  패스워드 생성기  #
+#----------------#
+
+def genPass() :
+    alphabetNnumber = "qwertyuiopasdfghjklzxcvbnm1234567890"
+    pw = ""
+    import random
+
+    for i in range(6) :
+        pw = pw + random.choice(alphabetNnumber)
+    return pw
+
+print(genPass())
+
+#------------------------#
+#  패스워드 생성기 도전문제  #
+#------------------------#
+
+def genPass() :
+    alphabetNnumber = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890"
+    pw = ""
+    import random
+    r = str(random.randrange(1,10))
+    pw = pw + r
+
+    for i in range(5) :
+        pw = pw + random.choice(alphabetNnumber)
+    return pw
+
+print(genPass())
+
+#-----------------#
+#  키워드 인수 연습  #
+#-----------------#
+
+def add(a,b) :
+    return a + b
+
+def mul(a,b) :
+    return a * b
+
+ans1 = mul(a=20, b=30)
+ans2 = add(a=10,b=ans1)
+print(ans2)
+
+#-------------#
+#  온도 변환기  #
+#-------------#
