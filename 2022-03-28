@@ -1,0 +1,50 @@
+#-----------#
+#  입력 검증  #
+#-----------#
+
+def square() :
+    width = int(input("가로"))
+    while width <= 0 :
+        width = int(input("양수로 가로를 다시 입력하시오"))
+
+    height = int(input("세로"))
+    while height <= 0:
+        height = int(input("양수로 세로를 다시 입력하시오"))
+
+    print(width * height)
+
+square()
+
+#--------------------#
+#  전역변수와 지역변수  #
+#--------------------#
+
+PI = 3.14
+
+def pi() :
+    r = float(input("원의 반지름을 입력하시오"))
+
+    area = PI * r * r
+    margin = 2 * PI * r
+
+    print("원의 넓이는", area)
+    print("원의 둘레는", margin)
+
+#----------------------#
+#  여러 개의 값 반환하기  #
+#----------------------#
+
+x1 = int(input("x1="))
+y1 = int(input("y1="))
+x2 = int(input("x2="))
+y2 = int(input("y2="))
+
+def dots2line(x1,y1,x2,y2) :
+    if x1 == x2 :
+        return 0, 0
+    else :
+        slope = (y2 - y1) / (x2 - x1)
+        ydot = y1 - slope * x1
+        return slope, ydot
+
+print(dots2line(x1,y1,x2,y2))
