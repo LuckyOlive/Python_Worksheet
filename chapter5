@@ -145,4 +145,18 @@ def dots2line(x1,y1,x2,y2) :
 
 print(dots2line(x1,y1,x2,y2))
 
+#--------------------------#
+#  문자열에서 문자 추출하기  #
+#--------------------------#
 
+i = str(input()).lower()
+vowel = "aieou"
+consonant = "bcdfghjklmnpqrstvwxyz"
+resultV = ""
+resultC = ""
+for temp in i :
+    if temp in vowel  :
+        resultV = resultV + temp
+    elif temp in consonant :
+        resultC =resultC +temp
+print("자음의 개수는",len(resultV),"모음의 개수는",len(resultC))
